@@ -20,23 +20,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/starlte/device.mk)
+$(call inherit-product, device/samsung/j4lte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := starlte
-PRODUCT_NAME := lineage_starlte
+PRODUCT_DEVICE := j4lte
+PRODUCT_NAME := lineage_j4lte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := SM-G960F
+PRODUCT_MODEL := SM-J400F
 PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-BUILD_FINGERPRINT := samsung/starltexx/starlte:10/QP1A.190711.020/G960FXXU7DTAA:user/release-keys
+BUILD_FINGERPRINT := samsung/j4ltejx/j4lte:10/QP1A.190711.020/J400FXXS9CVE4:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=starltexx \
-        PRIVATE_BUILD_DESC="starltexx-user 10 QP1A.190711.020 G960FXXU7DTAA release-keys"
+        PRODUCT_NAME=j4ltejx \
+        PRIVATE_BUILD_DESC="j4ltejx-user 10 QP1A.190711.020 J400FXXS9CVE4 release-keys"

@@ -14,16 +14,16 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/starlte
+DEVICE_PATH := device/samsung/j4lte
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := starltexx,starlteks,starlte
+TARGET_OTA_ASSERT_DEVICE := j4lte,j4ltejx
 
 # Kernel
-TARGET_KERNEL_CONFIG := exynos9810-starlte_defconfig
+TARGET_KERNEL_CONFIG := exynos7570-j4lte_defconfig
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 4561305600
 
 # Inherit common board flags
-include device/samsung/universal9810-common/BoardConfigCommon.mk
+include device/samsung/universal7570-common/BoardConfigCommon.mk
