@@ -23,7 +23,7 @@ TARGET_OTA_ASSERT_DEVICE := j4lte,j4ltejx
 TARGET_KERNEL_CONFIG := exynos7570-j4lte_defconfig
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 4561305600
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2625634304
 
 # Inherit common board flags
 include device/samsung/universal7570-common/BoardConfigCommon.mk
