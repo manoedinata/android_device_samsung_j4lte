@@ -19,5 +19,3 @@ import common
 def FullOTA_InstallEnd(info):
     info.script.AppendExtra('ifelse(is_mounted("/system"), unmount("/system"));')
     info.script.AppendExtra('ifelse(is_mounted("/system"), "", mount("ext4", "EMMC", "/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM", "/system"));')
-    info.script.AppendExtra('ifelse(is_substring("J600FN", getprop("ro.bootloader"))," ",run_program("/sbin/sh", "-c", "rm -rf /system/system/app/NfcNci"));')
-
