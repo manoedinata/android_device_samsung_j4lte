@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,23 +19,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from j6lte device
-$(call inherit-product, device/samsung/j6lte/device.mk)
+# Inherit from j4lte device
+$(call inherit-product, device/samsung/j4lte/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_j6lte
-PRODUCT_DEVICE := j6lte
+PRODUCT_NAME := lineage_j4lte
+PRODUCT_DEVICE := j4lte
 PRODUCT_MANUFACTURER := Samsung
 PRODUCT_BRAND := Samsung
-PRODUCT_MODEL := Samsung Galaxy J6
+PRODUCT_MODEL := Samsung Galaxy J4
 
 TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-BUILD_FINGERPRINT := "samsung/j6ltexx/j6lte:10/QP1A.190711.020/J600FNXXU7CTC8:user/release-keys"
+BUILD_FINGERPRINT := "samsung/j4ltejx/j4lte:10/QP1A.190711.020/J400FXXS9CVE4:user/release-keys"
 
 TARGET_VENDOR := samsung

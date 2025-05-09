@@ -1,13 +1,13 @@
 #!/bin/bash
 #
-# Copyright (C) 2018-2021 The LineageOS Project
+# Copyright (C) 2018-2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-DEVICE=j6lte
+DEVICE=j4lte
 VENDOR=samsung
 
 # Load extract_utils and do some sanity checks

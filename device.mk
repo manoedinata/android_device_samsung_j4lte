@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/j6lte
+DEVICE_PATH := device/samsung/j4lte
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/samsung/j6lte
+PRODUCT_SOONG_NAMESPACES += device/samsung/j4lte
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -92,6 +92,6 @@ PRODUCT_COPY_FILES += \
 -include $(DEVICE_PATH)/vendor_prop.mk
 
 # Inherit from common
-$(call inherit-product, device/samsung/universal7870-common/device-common.mk)
+$(call inherit-product, device/samsung/universal7570-common/device-common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/j6lte/j6lte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/j4lte/j4lte-vendor.mk)

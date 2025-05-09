@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/samsung/j6lte
+DEVICE_PATH := device/samsung/j4lte
 
 # Audio
 BOARD_USE_TFA_AMP := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := j6lte,j6ltecis,j6ltexx,j6lteub,j6lteins,j6ltedtvvj,j6ltekx,j6ltedx
+TARGET_OTA_ASSERT_DEVICE := j4lte,j4ltejx,j4lteub
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -29,14 +29,14 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_SCREEN_DENSITY := 320
 
 # Kernel
-TARGET_KERNEL_CONFIG := exynos7870-j6lte_defconfig
+TARGET_KERNEL_CONFIG := exynos7570-j4lte_defconfig
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j6lte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j6lte
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j4lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_j4lte
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
@@ -61,7 +61,7 @@ WIFI_DRIVER_FW_PATH_AP           := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
 
 # inherit from common
--include device/samsung/universal7870-common/BoardConfigCommon.mk
+-include device/samsung/universal7570-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/j6lte/BoardConfigVendor.mk
+-include vendor/samsung/j4lte/BoardConfigVendor.mk

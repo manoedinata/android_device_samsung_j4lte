@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2017-2025 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 
 set -e
 
-DEVICE=j6lte
+DEVICE=j4lte
 VENDOR=samsung
 
 export INITIAL_COPYRIGHT_YEAR=2018
