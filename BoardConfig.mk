@@ -42,6 +42,9 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_j4lte
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
 
+# TEEGRIS
+BOARD_SEPOLICY_TEE_FLAVOR := teegris
+
 # Wifi
 BOARD_WLAN_DEVICE                := slsi
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
