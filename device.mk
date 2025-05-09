@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/j6lte
+DEVICE_PATH := device/samsung/j4lte
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/samsung/j6lte
+PRODUCT_SOONG_NAMESPACES += device/samsung/j4lte
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -71,7 +71,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.universal7870
+    android.hardware.power@1.0-service.universal7570
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -96,7 +96,7 @@ PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/configs/audio/oss/mixer_paths_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
 # Inherit from common (audio)
-$(call inherit-product, device/samsung/universal7870-common/device-oss_audio.mk)
+$(call inherit-product, device/samsung/universal7570-common/device-oss_audio.mk)
 
 # Custom mixer_paths prebuilt
 #PRODUCT_COPY_FILES += \
@@ -104,14 +104,14 @@ $(call inherit-product, device/samsung/universal7870-common/device-oss_audio.mk)
 #    $(DEVICE_PATH)/configs/prebuilt/audio/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml
 
 # Inherit from common
-# $(call inherit-product, device/samsung/universal7870-common/device-prebuilt_audio.mk)
+# $(call inherit-product, device/samsung/universal7570-common/device-prebuilt_audio.mk)
 
 # Properties
 -include $(DEVICE_PATH)/vendor_prop.mk
 
 # Inherit from common
-$(call inherit-product, device/samsung/universal7870-common/device-common.mk)
+$(call inherit-product, device/samsung/universal7570-common/device-common.mk)
 
-# $(call inherit-product, device/samsung/universal7870-common/device-prebuilt_bsp-vndk.mk)
+# $(call inherit-product, device/samsung/universal7570-common/device-prebuilt_bsp-vndk.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/j6lte/j6lte-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/j4lte/j4lte-vendor.mk)
