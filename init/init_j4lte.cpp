@@ -85,60 +85,26 @@ void vendor_load_properties()
 
     std::string bootloader = GetProperty("ro.bootloader","");
 
-    if (bootloader.find("J600FX") == 0) {
-    /* SM-J600F */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600F");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6ltecis");
+    if (bootloader.find("J400F") == 0) {
+    /* SM-J400F */
+        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J400F");
+        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j4ltejx");
 
         init_dsds();
 
-    } else if (bootloader.find("J600FN") == 0) {
-    /* SM-J600FN */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600FN");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6ltexx");
+    } else if (bootloader.find("J400M") == 0) {
+    /* SM-J400M */
+        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J400M");
+        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j4lteub");
 
         init_dsds();
 
-    } else if (bootloader.find("J600GU") == 0) {
-    /* SM-J600G */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600G");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6lteub");
-
-        init_dsds();
-
-    } else if (bootloader.find("J600GF") == 0) {
-    /* SM-J600GF */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600GF");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6lteins");
-
-        init_dsds();
-
-    } else if (bootloader.find("J600GT") == 0) {
-    /* SM-J600GT */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600GT");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6ltedtvvj");
-
-        init_dsds();
-
-    } else if (bootloader.find("J600G") == 0) {
-     /* SM-J600G */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600G");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6ltedx");
-
-        init_dsds();
-
-    } else if (bootloader.find("J600N") == 0) {
-    /* SM-J600N */
-        property_override_quad("ro.product.model", "ro.product.odm.model", "ro.product.system.model", "ro.product.vendor.model", "SM-J600N");
-        property_override_quad("ro.product.name", "ro.product.odm.name", "ro.product.system.name", "ro.product.vendor.name", "j6ltekx");
-
-        init_dsds();
     }
 
     /* Common properties*/
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
-    property_override("ro.build.description", "samsung/j6ltexx/j6lte:10/QP1A.190711.020/J600FNXXU7CTC8:user/release-keys");
-    property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "j6lte");
+    property_override_dual("ro.build.fingerprint", "samsung/j4ltejx/j4lte:10/QP1A.190711.020/J400FXXS9CVE4:user/release-keys");
+    property_override("ro.build.description", "j4ltejx-user 10 QP1A.190711.020 J400FXXS9CVE4 release-keys");
+    property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "j4lte");
 
     std::string device = GetProperty("ro.product.device", "");
     LOG(ERROR) << "Found bootloader id %s setting build properties for %s device\n" << bootloader.c_str() << device.c_str();
