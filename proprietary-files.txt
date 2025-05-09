@@ -42,16 +42,6 @@ vendor/lib/libgf_in_system_lib.so
 vendor/lib/libqfp_sensortest.so
 vendor/lib/libsynaFpSensorTestNwd.so
 
-# NFC
-vendor/firmware/nfc/sec_s3nrn81_firmware.bin
-vendor/etc/nfc/sec_s3nrn81_rfreg.bin
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-sec-vendor.conf
-vendor/bin/hw/sec.android.hardware.nfc@1.2-service
-vendor/etc/init/sec.android.hardware.nfc@1.2-service.rc
-vendor/lib64/nfc_nci_sec.so
-vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
-
 # Sensors
 vendor/lib/hw/sensors.universal7570.so
 
